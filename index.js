@@ -174,9 +174,14 @@ console.log("Topic 2 - Request 4:", USApop(zooAnimals));
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(/*Your Code Here */) {
+function consume(a, b, cb) {
   /*Your Code Here */
+  return cb(a, b);
 }
+
+console.log(
+  "Topic 3 - Step 1:" //consume(something, something, function)
+);
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
