@@ -34,7 +34,7 @@ function summation(num) {
   }
   return counter;
 }
-console.log("Task 2", summation(4));
+console.log("Task 2:", summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -119,7 +119,7 @@ function animalNames(arr) {
   return displayNames;
 }
 
-console.log("Topic 2: Request 1", animalNames(zooAnimals));
+console.log("Topic 2 - Request 1:", animalNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -134,7 +134,7 @@ function lowerCaseNames(arr) {
   });
   return lowerCaseNames;
 }
-console.log("Topic 2: Request 2", lowerCaseNames(zooAnimals));
+console.log("Topic 2 - Request 2:", lowerCaseNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -149,7 +149,7 @@ function lowPopulationAnimals(arr) {
   return lowPopulationAnimals;
 }
 
-console.log("Topic 2: Request 3", lowPopulationAnimals(zooAnimals));
+console.log("Topic 2 - Request 3:", lowPopulationAnimals(zooAnimals));
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -157,9 +157,14 @@ console.log("Topic 2: Request 3", lowPopulationAnimals(zooAnimals));
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(/*Your Code Here*/) {
+function USApop(arr) {
   /*Your Code Here*/
+  return arr.reduce((total, curVal) => {
+    return total + curVal.population;
+  }, 0);
 }
+
+console.log("Topic 2 - Request 4:", USApop(zooAnimals));
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
