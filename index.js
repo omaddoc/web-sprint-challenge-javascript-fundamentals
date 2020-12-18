@@ -134,15 +134,22 @@ function lowerCaseNames(arr) {
   });
   return lowerCaseNames;
 }
+console.log("Topic 2: Request 2", lowerCaseNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-function lowPopulationAnimals(/*Your Code Here*/) {
+function lowPopulationAnimals(arr) {
   /*Your Code Here*/
+  const lowPopulationAnimals = arr.filter((animal) => {
+    return animal.population < 5;
+  });
+  return lowPopulationAnimals;
 }
+
+console.log("Topic 2: Request 3", lowPopulationAnimals(zooAnimals));
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
