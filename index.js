@@ -180,7 +180,7 @@ function consume(a, b, cb) {
 }
 
 console.log(
-  "Topic 3 - Step 1:" //consume(something, something, function)
+  "Topic 2 - Step 1:" //consume(something, something, function)
 );
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
@@ -191,7 +191,7 @@ function add(a, b) {
   return a + b;
 }
 
-console.log("Topic 3 - Step 2:", consume(3, 4, add));
+console.log("Topic 2 - Step 2:", consume(3, 4, add));
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
@@ -200,7 +200,7 @@ function multiply(a, b) {
   return a * b;
 }
 
-console.log("Topic 3 - Step 3:", consume(3, 4, multiply));
+console.log("Topic 2 - Step 3:", consume(3, 4, multiply));
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
@@ -208,7 +208,7 @@ function greeting(a, b) {
   return `Hello ${a} ${b}, nice to meet you!`;
 }
 
-console.log("Topic 3 - Step 4:", consume("Luke", "Skywalker", greeting));
+console.log("Topic 2 - Step 4:", consume("Luke", "Skywalker", greeting));
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -223,8 +223,11 @@ console.log("Topic 3 - Step 4:", consume("Luke", "Skywalker", greeting));
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */) {
+function CuboidMaker(attr) {
   /*Your Code Here */
+  this.length = attr.length;
+  this.width = attr.width;
+  this.height = attr.height;
 }
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
